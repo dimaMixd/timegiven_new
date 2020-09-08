@@ -9,13 +9,13 @@
     <div class="container">
         <?php include 'nav.php'; ?>
         <div class="hero-content">
+            <?php $hero_block = get_field('hero_block'); ?>
             <h1>
-                Kingime<br>aega
+                <?php echo $hero_block['hero_title']; ?>
             </h1>
-            <h3>
-                <b>TimeGiven on SOS-kell</b>, mis kriisiolukorras annab<br>häiret ning saadab teavituse ettemääratud<br>kontaktidele.
-            </h3>
-            <a href="#" class="button button--orange">Loe lähemalt</a>
+            <?php echo $hero_block['hero_subtitle']; ?>
+            <?php $button = $hero_block['button']; ?>
+            <a href="<?php echo $button['link']; ?>" class="button button--orange"><?php echo $button['text']; ?></a>
         </div>
     </div>
 </section>
